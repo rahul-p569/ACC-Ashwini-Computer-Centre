@@ -12,11 +12,12 @@ export function Hero() {
             A National IT Development Organization
           </div>
           <h1 className="mb-4 md:mb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-balance">
-            Shape Your Future with <span className="text-accent">Computer Skills</span>
+            ACC Computer Center - <span className="text-accent">Ashwini Computer Centre</span> | Best Computer Training Institute
           </h1>
           <p className="mb-6 md:mb-8 text-sm md:text-lg text-primary-foreground/80 text-pretty px-2">
-            Join Ashwini Computer Center and unlock your potential in the digital world. We offer certified courses in
-            computer basics, typing, programming, and more.
+            Welcome to ACC Computer Center (Ashwini Computer Centre) - Your trusted partner for quality computer education in Deoghar, Jharkhand. 
+            Join ACC Computer Center and unlock your potential in the digital world. We offer ISO certified courses in
+            computer basics, typing, programming, Tally, DTP, and more.
           </p>
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center px-4 sm:px-0">
             <Link href="/admission" className="w-full sm:w-auto">

@@ -23,7 +23,7 @@ export function Header() {
             <div className="relative h-14 w-14 md:h-16 md:w-16 flex-shrink-0">
               <Image
                 src="/acc-logo.png"
-                alt="Ashwini Computer Center Logo"
+                alt="ACC Computer Center - Ashwini Computer Centre Logo"
                 fill
                 className="object-contain"
                 priority

@@ -58,7 +58,7 @@ export function Gallery() {
             Our <span className="text-primary">Gallery</span>
           </h2>
           <p className="mx-auto max-w-2xl text-sm md:text-base text-muted-foreground px-2">
-            Glimpses of our events, celebrations, and the vibrant learning environment at ACC.
+            Glimpses of our events, celebrations, and the vibrant learning environment at ACC Computer Center (Ashwini Computer Centre).
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function Gallery() {
                 <div className="relative aspect-square sm:aspect-video overflow-hidden">
                   <img
                     src={img.image_url || "/placeholder.svg"}
-                    alt={img.title}
+                    alt={`${img.title} - ACC Computer Center Ashwini Computer Centre`}
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/20" />
@@ -90,7 +90,7 @@ export function Gallery() {
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent className="max-w-[95vw] md:max-w-4xl p-2 md:p-4">
           {selectedImage && (
-            <img src={selectedImage || "/placeholder.svg"} alt="Gallery image" className="w-full rounded-lg" />
+            <img src={selectedImage || "/placeholder.svg"} alt="ACC Computer Center - Ashwini Computer Centre Gallery" className="w-full rounded-lg" />
           )}
         </DialogContent>
       </Dialog>

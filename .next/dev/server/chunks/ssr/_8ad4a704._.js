@@ -145,7 +145,7 @@ function Header() {
                                         className: "relative h-14 w-14 md:h-16 md:w-16 flex-shrink-0",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/acc-logo.png",
-                                            alt: "Ashwini Computer Center Logo",
+                                            alt: "ACC Computer Center - Ashwini Computer Centre Logo",
                                             fill: true,
                                             className: "object-contain",
                                             priority: true
@@ -912,7 +912,7 @@ function Gallery() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "mx-auto max-w-2xl text-sm md:text-base text-muted-foreground px-2",
-                                children: "Glimpses of our events, celebrations, and the vibrant learning environment at ACC."
+                                children: "Glimpses of our events, celebrations, and the vibrant learning environment at ACC Computer Center (Ashwini Computer Centre)."
                             }, void 0, false, {
                                 fileName: "[project]/components/gallery.tsx",
                                 lineNumber: 60,
@@ -948,7 +948,7 @@ function Gallery() {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             src: img.image_url || "/placeholder.svg",
-                                            alt: img.title,
+                                            alt: `${img.title} - ACC Computer Center Ashwini Computer Centre`,
                                             className: "h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
                                         }, void 0, false, {
                                             fileName: "[project]/components/gallery.tsx",
@@ -1006,7 +1006,7 @@ function Gallery() {
                     className: "max-w-[95vw] md:max-w-4xl p-2 md:p-4",
                     children: selectedImage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                         src: selectedImage || "/placeholder.svg",
-                        alt: "Gallery image",
+                        alt: "ACC Computer Center - Ashwini Computer Centre Gallery",
                         className: "w-full rounded-lg"
                     }, void 0, false, {
                         fileName: "[project]/components/gallery.tsx",

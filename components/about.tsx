@@ -7,12 +7,14 @@ export function About() {
         <div className="grid gap-8 md:gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">
-              About <span className="text-primary">Ashwini Computer Center</span>
+              About <span className="text-primary">ACC Computer Center - Ashwini Computer Centre</span>
             </h2>
             <p className="mb-4 md:mb-6 text-sm md:text-base text-muted-foreground leading-relaxed">
-              Ashwini Computer Center (ACC) is an ISO 9001:2015 certified organization dedicated to providing quality
-              computer education. As a National IT Development Organization affiliated with MEGABYTE CORPORATE, we have
-              been shaping the future of students through comprehensive computer training programs.
+              ACC Computer Center (Ashwini Computer Centre) is an ISO 9001:2015 certified organization dedicated to providing quality
+              computer education in Deoghar, Jharkhand. As a National IT Development Organization affiliated with MEGABYTE CORPORATE, 
+              ACC Computer Center has been shaping the future of students through comprehensive computer training programs. 
+              When you search for "ACC computer" or "ACC computer center", you'll find Ashwini Computer Centre as the leading 
+              computer training institute in the region.
             </p>
 
             <div className="mb-6 md:mb-8 space-y-2 md:space-y-3">
@@ -60,7 +62,7 @@ export function About() {
             <div className="aspect-video overflow-hidden rounded-xl md:rounded-2xl shadow-xl md:shadow-2xl">
               <img
                 src="/computer-training-center-classroom-students.jpg"
-                alt="Students learning at Ashwini Computer Center"
+                alt="Students learning at ACC Computer Center - Ashwini Computer Centre in Deoghar"
                 className="h-full w-full object-cover"
               />
             </div>
