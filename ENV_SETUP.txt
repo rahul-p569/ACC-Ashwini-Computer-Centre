@@ -1,0 +1,42 @@
+=================================================================
+   ENVIRONMENT SETUP FOR SUPABASE - QUICK REFERENCE
+=================================================================
+
+STEP 1: Create a file named .env.local in your project root folder
+
+STEP 2: Add these two lines to the file:
+
+NEXT_PUBLIC_SUPABASE_URL=your-project-url-here
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+
+STEP 3: Replace the values with your actual Supabase credentials:
+- Get them from: Supabase Dashboard → Settings → API
+- Project URL looks like: https://xxxxxxxxxxxxx.supabase.co
+- Anon key is a long string starting with: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+
+STEP 4: Save the file
+
+STEP 5: Restart your development server:
+- Press Ctrl+C to stop
+- Run: pnpm run dev
+
+=================================================================
+   EXAMPLE .env.local FILE
+=================================================================
+
+NEXT_PUBLIC_SUPABASE_URL=https://abcdefghijklmnop.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFiY2RlZmdoaWprbG1ub3AiLCJyb2xlIjoiYW5vbiIsImlhdCI6MTYyMzg3NjQ4MCwiZXhwIjoxOTM5NDUyNDgwfQ.xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+=================================================================
+   IMPORTANT NOTES
+=================================================================
+
+✓ File must be named exactly: .env.local
+✓ Place it in the project root (same folder as package.json)
+✓ No quotes needed around the values
+✓ No spaces around the = sign
+✓ This file is gitignored (won't be committed to version control)
+✓ You must restart the dev server after creating/modifying this file
+
+=================================================================
+
