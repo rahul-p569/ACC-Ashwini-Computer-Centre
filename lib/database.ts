@@ -1,4 +1,4 @@
-import { supabase, AdmissionSubmission, ExamSubmission, GalleryPhoto } from './supabase'
+import { supabase, AdmissionSubmission, ExamSubmission, GalleryPhoto, Enquiry } from './supabase'
 
 // Admission Submissions
 export async function createAdmissionSubmission(data: AdmissionSubmission) {
@@ -123,6 +123,34 @@ export async function uploadGalleryImage(file: File) {
   }
 }
 
+// Certificate Functions (using same gallery_photos table, filtered by category)
+export async function createCertificate(data: GalleryPhoto) {
+  // Ensure category is "certificate"
+  const certificateData = { ...data, category: "certificate" }
+  return createGalleryPhoto(certificateData)
+}
+
+export async function getAllCertificates() {
+  const { data, error } = await supabase
+    .from('gallery_photos')
+    .select('*')
+    .eq('category', 'certificate')
+    .order('created_at', { ascending: false })
+  
+  if (error) throw error
+  return data || []
+}
+
+export async function deleteCertificate(id: number, imagePath: string) {
+  // Use the same delete function as gallery
+  return deleteGalleryPhoto(id, imagePath)
+}
+
+export async function uploadCertificateImage(file: File) {
+  // Use the same upload function as gallery
+  return uploadGalleryImage(file)
+}
+
 // Admin Authentication
 export async function signInWithEmail(email: string, password: string) {
   const { data, error } = await supabase.auth.signInWithPassword({
@@ -149,6 +177,49 @@ export async function getSession() {
   const { data: { session }, error } = await supabase.auth.getSession()
   if (error) throw error
   return session
+}
+
+// Enquiry Functions
+export async function createEnquiry(data: Enquiry) {
+  const { data: result, error } = await supabase
+    .from('enquiries')
+    .insert([data])
+    .select()
+    .single()
+  
+  if (error) throw error
+  return result
+}
+
+export async function getAllEnquiries() {
+  const { data, error } = await supabase
+    .from('enquiries')
+    .select('*')
+    .order('created_at', { ascending: false })
+  
+  if (error) throw error
+  return data || []
+}
+
+export async function deleteEnquiry(id: number) {
+  const { error } = await supabase
+    .from('enquiries')
+    .delete()
+    .eq('id', id)
+  
+  if (error) throw error
+}
+
+export async function updateEnquiryStatus(id: number, status: string) {
+  const { data, error } = await supabase
+    .from('enquiries')
+    .update({ status })
+    .eq('id', id)
+    .select()
+    .single()
+  
+  if (error) throw error
+  return data
 }
 
 

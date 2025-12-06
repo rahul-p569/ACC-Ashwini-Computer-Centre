@@ -9,9 +9,9 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <div className="relative h-14 w-14 flex-shrink-0">
+              <div className="relative h-24 w-24 md:h-28 md:w-28 flex-shrink-0">
                 <Image
-                  src="/acc-logo.png"
+                  src="/Logo-removebg-preview.png"
                   alt="ACC Computer Center - Ashwini Computer Centre Logo"
                   fill
                   className="object-contain"
@@ -66,7 +66,7 @@ export function Footer() {
                 <Phone className="h-4 w-4 text-accent" /> 7903060859
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-accent" /> info@ashwinicomputer.com
+                <Mail className="h-4 w-4 text-accent" /> ashwinicomputercenter@gmail.com
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />

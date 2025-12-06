@@ -727,18 +727,24 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 __turbopack_context__.s([
     "createAdmissionSubmission",
     ()=>createAdmissionSubmission,
+    "createCertificate",
+    ()=>createCertificate,
     "createExamSubmission",
     ()=>createExamSubmission,
     "createGalleryPhoto",
     ()=>createGalleryPhoto,
     "deleteAdmissionSubmission",
     ()=>deleteAdmissionSubmission,
+    "deleteCertificate",
+    ()=>deleteCertificate,
     "deleteExamSubmission",
     ()=>deleteExamSubmission,
     "deleteGalleryPhoto",
     ()=>deleteGalleryPhoto,
     "getAllAdmissionSubmissions",
     ()=>getAllAdmissionSubmissions,
+    "getAllCertificates",
+    ()=>getAllCertificates,
     "getAllExamSubmissions",
     ()=>getAllExamSubmissions,
     "getAllGalleryPhotos",
@@ -751,6 +757,8 @@ __turbopack_context__.s([
     ()=>signInWithEmail,
     "signOut",
     ()=>signOut,
+    "uploadCertificateImage",
+    ()=>uploadCertificateImage,
     "uploadGalleryImage",
     ()=>uploadGalleryImage
 ]);
@@ -827,6 +835,29 @@ async function uploadGalleryImage(file) {
         url: data.publicUrl,
         path: filePath
     };
+}
+async function createCertificate(data) {
+    // Ensure category is "certificate"
+    const certificateData = {
+        ...data,
+        category: "certificate"
+    };
+    return createGalleryPhoto(certificateData);
+}
+async function getAllCertificates() {
+    const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].from('gallery_photos').select('*').eq('category', 'certificate').order('created_at', {
+        ascending: false
+    });
+    if (error) throw error;
+    return data || [];
+}
+async function deleteCertificate(id, imagePath) {
+    // Use the same delete function as gallery
+    return deleteGalleryPhoto(id, imagePath);
+}
+async function uploadCertificateImage(file) {
+    // Use the same upload function as gallery
+    return uploadGalleryImage(file);
 }
 async function signInWithEmail(email, password) {
     const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({

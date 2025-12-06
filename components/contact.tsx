@@ -17,38 +17,45 @@ export function Contact() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
-          <Card>
-            <CardContent className="flex items-start gap-3 md:gap-4 p-4 md:p-6">
-              <div className="rounded-full bg-primary/10 p-2 md:p-3 flex-shrink-0">
-                <Phone className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+          <Card className="h-full">
+            <CardContent className="flex flex-col items-center text-center gap-3 md:gap-4 p-4 md:p-6 h-full">
+              <div className="rounded-full bg-primary/10 p-3 md:p-4 flex-shrink-0">
+                <Phone className="h-6 w-6 md:h-7 md:w-7 text-primary" />
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground text-sm md:text-base">Phone</h3>
-                <p className="text-muted-foreground text-sm md:text-base">7903060859</p>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="flex items-start gap-3 md:gap-4 p-4 md:p-6">
-              <div className="rounded-full bg-primary/10 p-2 md:p-3 flex-shrink-0">
-                <Mail className="h-5 w-5 md:h-6 md:w-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold text-foreground text-sm md:text-base">Email</h3>
-                <p className="text-muted-foreground text-sm md:text-base break-all">info@ashwinicomputer.com</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-foreground text-base md:text-lg mb-2">Phone</h3>
+                <a href="tel:7903060859" className="text-muted-foreground text-sm md:text-base hover:text-primary transition-colors">
+                  7903060859
+                </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="flex items-start gap-3 md:gap-4 p-4 md:p-6">
-              <div className="rounded-full bg-primary/10 p-2 md:p-3 flex-shrink-0">
-                <MapPin className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+          <Card className="h-full">
+            <CardContent className="flex flex-col items-center text-center gap-3 md:gap-4 p-4 md:p-6 h-full">
+              <div className="rounded-full bg-primary/10 p-3 md:p-4 flex-shrink-0">
+                <Mail className="h-6 w-6 md:h-7 md:w-7 text-primary" />
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground text-sm md:text-base">Address</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">
+              <div className="flex-1">
+                <h3 className="font-semibold text-foreground text-base md:text-lg mb-2">Email</h3>
+                <a 
+                  href="mailto:ashwinicomputercenter@gmail.com" 
+                  className="text-muted-foreground text-xs md:text-sm hover:text-primary transition-colors break-all"
+                >
+                  ashwinicomputercenter@gmail.com
+                </a>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="h-full">
+            <CardContent className="flex flex-col items-center text-center gap-3 md:gap-4 p-4 md:p-6 h-full">
+              <div className="rounded-full bg-primary/10 p-3 md:p-4 flex-shrink-0">
+                <MapPin className="h-6 w-6 md:h-7 md:w-7 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-semibold text-foreground text-base md:text-lg mb-2">Address</h3>
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   Chitra More, Uperbandha Dumka Jamtara Road,
                   <br />
                   Deoghar, Jharkhand - 814146
@@ -57,14 +64,14 @@ export function Contact() {
             </CardContent>
           </Card>
 
-          <Card>
-            <CardContent className="flex items-start gap-3 md:gap-4 p-4 md:p-6">
-              <div className="rounded-full bg-primary/10 p-2 md:p-3 flex-shrink-0">
-                <Clock className="h-5 w-5 md:h-6 md:w-6 text-primary" />
+          <Card className="h-full">
+            <CardContent className="flex flex-col items-center text-center gap-3 md:gap-4 p-4 md:p-6 h-full">
+              <div className="rounded-full bg-primary/10 p-3 md:p-4 flex-shrink-0">
+                <Clock className="h-6 w-6 md:h-7 md:w-7 text-primary" />
               </div>
-              <div>
-                <h3 className="font-semibold text-foreground text-sm md:text-base">Working Hours</h3>
-                <p className="text-muted-foreground text-xs md:text-sm">
+              <div className="flex-1">
+                <h3 className="font-semibold text-foreground text-base md:text-lg mb-2">Working Hours</h3>
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   Mon - Sat: 9:00 AM - 7:00 PM
                   <br />
                   Sunday: Closed

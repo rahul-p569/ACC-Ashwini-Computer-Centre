@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { LayoutDashboard, ImageIcon, FileText, X, ClipboardList } from "lucide-react"
+import { LayoutDashboard, ImageIcon, FileText, X, ClipboardList, Award, MessageSquare } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 interface AdminSidebarProps {
@@ -15,7 +15,9 @@ const menuItems = [
   { id: "overview", label: "Dashboard", icon: LayoutDashboard },
   { id: "submissions", label: "Form Submissions", icon: ClipboardList },
   { id: "applications", label: "Applications", icon: FileText },
+  { id: "enquiries", label: "Enquiries", icon: MessageSquare },
   { id: "gallery", label: "Gallery", icon: ImageIcon },
+  { id: "certificates", label: "Certificates", icon: Award },
 ]
 
 export function AdminSidebar({ activeTab, setActiveTab, isOpen, setIsOpen }: AdminSidebarProps) {
@@ -32,9 +34,9 @@ export function AdminSidebar({ activeTab, setActiveTab, isOpen, setIsOpen }: Adm
       >
         <div className="flex h-16 items-center justify-between px-4 border-b border-primary-foreground/10">
           <div className="flex items-center gap-3">
-            <div className="relative h-10 w-10 flex-shrink-0">
+            <div className="relative h-14 w-14 md:h-16 md:w-16 flex-shrink-0">
               <Image
-                src="/acc-logo.png"
+                src="/Logo-removebg-preview.png"
                 alt="ACC Logo"
                 fill
                 className="object-contain"

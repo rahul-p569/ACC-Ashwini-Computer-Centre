@@ -6,6 +6,8 @@ import { AdminSidebar } from "./admin-sidebar"
 import { AdminHeader } from "./admin-header"
 import { DashboardOverview } from "./dashboard-overview"
 import { GalleryManager } from "./gallery-manager"
+import { CertificateManager } from "./certificate-manager"
+import { EnquiryManager } from "./enquiry-manager"
 import { ApplicationsList } from "./applications-list"
 import { SubmissionsViewer } from "./submissions-viewer"
 
@@ -47,6 +49,8 @@ export function AdminDashboard() {
           {activeTab === "overview" && <DashboardOverview />}
           {activeTab === "submissions" && <SubmissionsViewer />}
           {activeTab === "gallery" && <GalleryManager />}
+          {activeTab === "certificates" && <CertificateManager />}
+          {activeTab === "enquiries" && <EnquiryManager />}
           {activeTab === "applications" && <ApplicationsList />}
         </main>
       </div>

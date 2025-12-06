@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       "ACC Computer Center (Ashwini Computer Centre) - ISO 9001:2015 certified computer training institute in Deoghar, Jharkhand. Expert faculty, modern labs, flexible batches. Enroll now!",
     images: [
       {
-        url: "/acc-logo.png",
+        url: "/Logo-removebg-preview.png",
         width: 1200,
         height: 630,
         alt: "ACC Computer Center - Ashwini Computer Centre Logo",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: "ACC Computer Center | Ashwini Computer Centre - Best Computer Training Institute",
     description:
       "ACC Computer Center (Ashwini Computer Centre) - ISO 9001:2015 certified computer training institute in Deoghar, Jharkhand.",
-    images: ["/acc-logo.png"],
+    images: ["/Logo-removebg-preview.png"],
   },
   robots: {
     index: true,
@@ -95,22 +95,22 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/acc-logo.png",
+        url: "/Logo-removebg-preview.png",
         type: "image/png",
       },
       {
-        url: "/acc-logo.png",
+        url: "/Logo-removebg-preview.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
-        url: "/acc-logo.png",
+        url: "/Logo-removebg-preview.png",
         sizes: "16x16",
         type: "image/png",
       },
     ],
-    apple: "/acc-logo.png",
-    shortcut: "/acc-logo.png",
+    apple: "/Logo-removebg-preview.png",
+    shortcut: "/Logo-removebg-preview.png",
   },
 }
 

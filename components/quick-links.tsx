@@ -1,11 +1,12 @@
 import Link from "next/link"
-import { FileText, ImageIcon, Award, HelpCircle, Users, ClipboardList } from "lucide-react"
+import { FileText, ImageIcon, Award, HelpCircle, Users, ClipboardList, GraduationCap } from "lucide-react"
 
 const links = [
   { icon: FileText, label: "Admission", href: "/admission", color: "bg-green-500" },
   { icon: ClipboardList, label: "Exam Form", href: "/exam-form", color: "bg-blue-500" },
+  { icon: GraduationCap, label: "Courses", href: "#courses", color: "bg-violet-500" },
   { icon: ImageIcon, label: "Gallery", href: "#gallery", color: "bg-pink-500" },
-  { icon: Award, label: "Certificates", href: "#", color: "bg-orange-500" },
+  { icon: Award, label: "Certificates", href: "#certificates", color: "bg-orange-500" },
   { icon: HelpCircle, label: "Help Desk", href: "#contact", color: "bg-red-500" },
   { icon: Users, label: "Our Team", href: "#about", color: "bg-teal-500" },
 ]
@@ -14,7 +15,7 @@ export function QuickLinks() {
   return (
     <section className="py-8 md:py-12 bg-muted">
       <div className="container mx-auto px-3 md:px-4">
-        <div className="grid grid-cols-3 gap-2 md:gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-3 gap-2 md:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
           {links.map((link, i) => (
             <Link
               key={i}

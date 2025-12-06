@@ -20,9 +20,9 @@ export function Header() {
       <div className="container mx-auto px-3 md:px-4">
         <div className="flex items-center justify-between py-3 md:py-4">
           <Link href="/" className="flex items-center gap-2 md:gap-3">
-            <div className="relative h-14 w-14 md:h-16 md:w-16 flex-shrink-0">
+            <div className="relative h-24 w-24 md:h-28 md:w-28 flex-shrink-0">
               <Image
-                src="/acc-logo.png"
+                src="/Logo-removebg-preview.png"
                 alt="ACC Computer Center - Ashwini Computer Centre Logo"
                 fill
                 className="object-contain"

@@ -145,7 +145,7 @@ function Header() {
                                         className: "relative h-14 w-14 md:h-16 md:w-16 flex-shrink-0",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$0$2e$3_react$2d$dom$40$19$2e$2$2e$0_react$40$19$2e$2$2e$0_$5f$react$40$19$2e$2$2e$0$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             src: "/acc-logo.png",
-                                            alt: "Ashwini Computer Center Logo",
+                                            alt: "ACC Computer Center - Ashwini Computer Centre Logo",
                                             fill: true,
                                             className: "object-contain",
                                             priority: true
@@ -834,18 +834,30 @@ const supabase = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_module
 __turbopack_context__.s([
     "createAdmissionSubmission",
     ()=>createAdmissionSubmission,
+    "createCertificate",
+    ()=>createCertificate,
+    "createEnquiry",
+    ()=>createEnquiry,
     "createExamSubmission",
     ()=>createExamSubmission,
     "createGalleryPhoto",
     ()=>createGalleryPhoto,
     "deleteAdmissionSubmission",
     ()=>deleteAdmissionSubmission,
+    "deleteCertificate",
+    ()=>deleteCertificate,
+    "deleteEnquiry",
+    ()=>deleteEnquiry,
     "deleteExamSubmission",
     ()=>deleteExamSubmission,
     "deleteGalleryPhoto",
     ()=>deleteGalleryPhoto,
     "getAllAdmissionSubmissions",
     ()=>getAllAdmissionSubmissions,
+    "getAllCertificates",
+    ()=>getAllCertificates,
+    "getAllEnquiries",
+    ()=>getAllEnquiries,
     "getAllExamSubmissions",
     ()=>getAllExamSubmissions,
     "getAllGalleryPhotos",
@@ -858,6 +870,10 @@ __turbopack_context__.s([
     ()=>signInWithEmail,
     "signOut",
     ()=>signOut,
+    "updateEnquiryStatus",
+    ()=>updateEnquiryStatus,
+    "uploadCertificateImage",
+    ()=>uploadCertificateImage,
     "uploadGalleryImage",
     ()=>uploadGalleryImage
 ]);
@@ -935,6 +951,29 @@ async function uploadGalleryImage(file) {
         path: filePath
     };
 }
+async function createCertificate(data) {
+    // Ensure category is "certificate"
+    const certificateData = {
+        ...data,
+        category: "certificate"
+    };
+    return createGalleryPhoto(certificateData);
+}
+async function getAllCertificates() {
+    const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from('gallery_photos').select('*').eq('category', 'certificate').order('created_at', {
+        ascending: false
+    });
+    if (error) throw error;
+    return data || [];
+}
+async function deleteCertificate(id, imagePath) {
+    // Use the same delete function as gallery
+    return deleteGalleryPhoto(id, imagePath);
+}
+async function uploadCertificateImage(file) {
+    // Use the same upload function as gallery
+    return uploadGalleryImage(file);
+}
 async function signInWithEmail(email, password) {
     const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({
         email,
@@ -956,6 +995,31 @@ async function getSession() {
     const { data: { session }, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].auth.getSession();
     if (error) throw error;
     return session;
+}
+async function createEnquiry(data) {
+    const { data: result, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from('enquiries').insert([
+        data
+    ]).select().single();
+    if (error) throw error;
+    return result;
+}
+async function getAllEnquiries() {
+    const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from('enquiries').select('*').order('created_at', {
+        ascending: false
+    });
+    if (error) throw error;
+    return data || [];
+}
+async function deleteEnquiry(id) {
+    const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from('enquiries').delete().eq('id', id);
+    if (error) throw error;
+}
+async function updateEnquiryStatus(id, status) {
+    const { data, error } = await __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$supabase$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].from('enquiries').update({
+        status
+    }).eq('id', id).select().single();
+    if (error) throw error;
+    return data;
 }
 }),
 "[project]/components/admission-form.tsx [app-ssr] (ecmascript)", ((__turbopack_context__) => {

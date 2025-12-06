@@ -352,16 +352,15 @@ export function ApplicationsList() {
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex gap-2">
-                        <Button variant="ghost" size="sm" onClick={() => setSelectedApp(app)}>
+                        <Button variant="outline" size="sm" onClick={() => setSelectedApp(app)}>
                           <Eye className="h-4 w-4 mr-1" /> View
                         </Button>
                         <Button 
-                          variant="ghost" 
+                          variant="destructive" 
                           size="sm" 
                           onClick={() => handleDelete(app.id, type === 'admission' ? 'admission' : 'exam')}
-                          className="text-destructive hover:text-destructive"
                         >
-                          <Trash2 className="h-4 w-4" />
+                          <Trash2 className="h-4 w-4 mr-1" /> Delete
                         </Button>
                       </div>
                     </td>

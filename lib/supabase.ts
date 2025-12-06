@@ -82,6 +82,18 @@ export interface GalleryPhoto {
   image_path: string
 }
 
+export interface Enquiry {
+  id?: number
+  created_at?: string
+  name: string
+  email?: string
+  mobile: string
+  subject?: string
+  message: string
+  course_interest?: string
+  status?: string
+}
+
 export interface AdminUser {
   id?: number
   username: string
